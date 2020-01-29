@@ -1,0 +1,79 @@
+
+
+Queries
+=======
+
+Query
+ - Arguments
+    - static values
+    - variable values
+ - Fields
+    - Arguments
+
+ - Aliases
+ - Fragments
+ - Variables
+
+Operation
+    - Type
+        - Query, Mutation, Subscription
+    - Name
+
+Variable
+    - $Name
+    - Type
+    - Default Value
+    - Definition: ($<name>: <Type> = default)
+
+Directive
+    - @include(if: Boolean)
+
+
+Mutations
+=========
+
+
+
+Meta Fields
+===========
+
+    __typename
+
+
+Types
+=====
+
+    - Object Type
+    - Fields
+    - String: Scalar Type
+    - String!: Non-Nullable
+    - [String]: Array
+
+Arguments
+=========
+
+ - name,type, default
+
+
+Scalars
+=======
+
+ - Int (i32)
+ - Float (signed double)
+ - String Utf8
+ - Boolean
+ - ID
+
+ - Custom: "scalar Date"
+
+
+Enumerations
+============
+
+Unions
+======
+
+Input Types
+===========
+
+ -

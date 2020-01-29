@@ -1,0 +1,74 @@
+https://graphql.github.io/graphql-spec/draft/#sec-Language.Operations
+
+
+Token::
+    Punctuator
+    Name
+    IntValue
+    FloatValue
+    StringValue
+
+IgnoredToken::
+    UnicodeBOM
+    WhiteSpace
+    LineTerminator
+    Comment
+    Comma
+
+Punctuator: one of
+    !   $   (   )   ... :   =   @   [   ]   {   |   }
+
+
+Name::
+    /[_A-Za-z][_0-9A-Za-z]*/
+
+
+OperationDefinition::
+    OperationType Name_opt VariableDefinitions_opt Directives_opt SelectionSet
+    SelectionSet
+
+OperationType: one of
+    query   mutation    subscription
+
+
+SelectionSet::
+    { Selectionlist }
+
+Selection:
+    Field
+    FragmentSpread
+    InlineFragment
+
+
+Field:
+    Alias_opt Name Arguments_opt Directives_opt SelectionSet_opt
+
+Arguments:
+    ( Argumnet_list )
+
+Argument:
+    Name: Value
+
+Alias:
+    Name:
+
+
+Fragments:
+    FragmentSpread:
+        ... FragmentName Directives_opt
+
+    FragmentDefinition:
+
+        "fragment" FramentName TypeCondition Directives_opt SelectionSet
+
+    FramentName:
+        Name (but not "on")
+
+Type Condition
+    "on" NamedType
+
+
+
+Descriptions
+
+    """
